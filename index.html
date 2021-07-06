@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/styles.css">
+  <title>Pasapalabra</title>
+</head>
+<body>
+  <header>
+    <h1>Pasapalabra</h1>
+  </header>
+  <main class="container">
+    <div id="start-screen" class="container box rounded">
+      <h3>Ingresa tu nombre:</h3>
+      <form id="name-form" class="container">
+        <input type="text" id="name-form-input" placeholder="Nombre" class="input-text" autocomplete="off">
+        <button type="submit" class="button">JUGAR</button>
+      </form>
+    </div>
+    <div id="settings-screen" class="container box rounded" style="display: none">
+      <h3>Elige la dificultad<br>(Tendrás más tiempo)</h3>
+      <div class="diff-buttons centered">
+        <button id="diff-easy" class="button">FÁCIL</button>
+        <button id="diff-mid" class="button">MEDIA</button>
+        <button id="diff-hard" class="button">DIFÍCIL</button>
+      </div>
+    </div>
+    <div id="game-screen" class="container">
+      <div class="circle-container">
+        <ul class="circle">
+          <li class="circle-letter letter" >A</li>
+          <li class="circle-letter letter" >B</li>
+          <li class="circle-letter letter" >C</li>
+          <li class="circle-letter letter" >D</li>
+          <li class="circle-letter letter" >E</li>
+          <li class="circle-letter letter" >F</li>
+          <li class="circle-letter letter" >G</li>
+          <li class="circle-letter letter" >H</li>
+          <li class="circle-letter letter" >I</li>
+          <li class="circle-letter letter" >J</li>
+          <li class="circle-letter letter" >L</li>
+          <li class="circle-letter letter" >M</li>
+          <li class="circle-letter letter" >N</li>
+          <li class="circle-letter letter" >Ñ</li>
+          <li class="circle-letter letter" >O</li>
+          <li class="circle-letter letter" >P</li>
+          <li class="circle-letter letter" >Q</li>
+          <li class="circle-letter letter" >R</li>
+          <li class="circle-letter letter" >S</li>
+          <li class="circle-letter letter" >T</li>
+          <li class="circle-letter letter" >U</li>
+          <li class="circle-letter letter" >V</li>
+          <li class="circle-letter letter" >X</li>
+          <li class="circle-letter letter" >Y</li>
+          <li class="circle-letter letter" >Z</li>
+          <li class="circle-letter" id="points">0</li>
+        </ul>
+      </div>
+      <div class="under-circle">
+        <div id="question-box" class="container box rounded">
+          <h4 id="question"></h4>
+          <p id="question-desc"></p>
+        </div>
+        <div id="game-input">
+          <input type="text" id="game-form-input" class="input-text shadow" autofocus autocomplete="off">
+        </div>
+        <div class="game-buttons">
+          <button id="send-button" class="button shadow">ENVIAR (ENTER)</button>
+          <button id="pasapalabra-button" class="button shadow">PASAPALABRA (ESPACIO)</button>
+        </div>
+        <div id="timer" class="container box rounded">
+          <div><h3>Tiempo:  </h3></div>
+          <div><h3 id="countdown"></h3></div>
+        </div>
+      </div>
+    </div>
+    <div id="game-over-screen" class="container box rounded">
+      <h2>Fin del juego</h2>
+      <p><span id="game-over-state"></span> <span id="game-over-name"></span> has terminado el rosco.</p>
+      <p>Haz tenido <span id="game-over-points"></span> aciertos.</p>
+      <p>Y lo has logrado en <span id="game-over-time"></span> segundos.</p>
+      <button id="play-again-button" class="button">JUGAR DE NUEVO</button>
+    </div>
+    <div id="info-modal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 id="modal-header"></h3>
+        </div>
+        <div class="modal-message">
+          <p id="modal-message"></p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>Hecho con &#10084 por Franco Gabriel Sanchez</p>
+  </footer>
+</body>
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" ></script>
+<script src="./js/app.js"></script>
+</html>
